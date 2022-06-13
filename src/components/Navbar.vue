@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar gradinet-border-bottom">
+  <div class="navbar gradient-border-bottom">
     <div class="logo">Doomsday</div>
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
@@ -39,7 +39,7 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 565px) {
   .navbar {
     justify-content: center;
   }

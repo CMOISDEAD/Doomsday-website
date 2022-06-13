@@ -58,9 +58,33 @@ img {
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 550px) {
+  .description {
+    width: 100vw;
+  }
   .image-preview {
     display: none;
+  }
+}
+@media (min-width: 780px) and (max-width: 1400px) {
+  .msg {
+    display: none;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1400px) {
+  .presentation {
+    height: auto;
+  }
+}
+@media (min-width: 550px) and (max-width: 1400px) {
+  .presentation {
+    justify-content: center;
+  }
+  .description {
+    width: 100vw;
+  }
+  img {
+    width: 90vw;
   }
 }
 </style>
