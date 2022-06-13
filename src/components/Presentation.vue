@@ -6,7 +6,7 @@
         Markdown editor<br />
         The Doomsday markdown editor.
       </p>
-      <button class="btn-white">Download</button>
+      <button class="btn-primary">Download</button>
     </div>
     <div class="image-preview">
       <img src="../assets/codeeditor.png" alt="Doomsday" />
@@ -44,21 +44,23 @@ img {
   width: 100vw;
   font-size: 13px;
   text-align: center;
+  animation: 1s scroll-down infinite linear;
 }
-.btn-white {
-  margin: 5vh 0;
-  padding: 1vw;
-  border: 1px solid white;
-  border-radius: 0.5rem;
-  background: white;
-  color: #101010;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: all 0.5s ease-out;
+
+@keyframes scroll-down {
+  0%,
+  100% {
+    transform: translateY(0vw);
+  }
+
+  50% {
+    transform: translateY(1vh);
+  }
 }
-.btn-white:hover {
-  background: #171717;
-  border: 1px solid #171717;
-  color: white;
+
+@media (max-width: 490px) {
+  .image-preview {
+    display: none;
+  }
 }
 </style>

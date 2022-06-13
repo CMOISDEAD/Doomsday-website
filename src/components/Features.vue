@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="features">
     <h1>Features.</h1>
     <br />
     <div class="content">

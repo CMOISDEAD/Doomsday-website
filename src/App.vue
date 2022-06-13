@@ -1,10 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
 import Navbar from "@/components/Navbar.vue";
 import Presentation from "@/components/Presentation.vue";
 import Features from "@/components/Features.vue";
 import Preview from "@/components/Preview.vue";
+import Download from "@/components/Download.vue";
+import About from "@/components/About.vue";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
@@ -14,7 +16,12 @@ import Preview from "@/components/Preview.vue";
     <Features />
     <br />
     <Preview />
+    <br />
+    <Download />
+    <br />
+    <About />
   </div>
+  <Footer />
 </template>
 
 <style>

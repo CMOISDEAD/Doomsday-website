@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="navbar gradinet-border-bottom">
     <div class="logo">Doomsday</div>
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
@@ -17,9 +17,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-width: 1px;
-  border-style: solid;
-  border-image: linear-gradient(to right, #101010, white, #101010) 0 0 1 0;
 }
 
 .nav-links {
@@ -40,6 +37,17 @@ a {
   padding: 0.4rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  color: white;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    justify-content: center;
+  }
+  .logo {
+    text-align: center;
+  }
+  .nav-links {
+    display: none;
+  }
 }
 </style>

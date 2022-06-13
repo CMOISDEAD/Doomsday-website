@@ -5,7 +5,7 @@
   --vt-c-white-mute: #f2f2f2;
 
   --vt-c-black: #101010;
-  --vt-c-black-soft: #222222;
+  --vt-c-black-soft: #171717;
   --vt-c-black-mute: #282828;
 
   --vt-c-indigo: #2c3e50;
@@ -15,15 +15,17 @@
   --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
   --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
 
-  --vt-c-text-light-1: var(--vt-c-white);
+  --vt-c-text-light-1: var(--vt-c-black);
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --vt-c-text-muted-dark: rgba(235, 235, 235, 0.64);
+  --vt-c-text-muted-light: rgba(60, 60, 60, 0.66);
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-black);
+  --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 
@@ -32,6 +34,10 @@
 
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
+  --color-muted: var(--vt-c-text-muted-light);
+
+  --color-link: var(--vt-c-text-light-1);
+  --color-link-hover: var(--vt-c-text-dark-1);
 
   --section-gap: 160px;
 }
@@ -45,8 +51,12 @@
     --color-border: var(--vt-c-divider-dark-2);
     --color-border-hover: var(--vt-c-divider-dark-1);
 
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --color-heading: var(--vt-c-text-dark-2);
+    --color-text: var(--vt-c-text-dark-1);
+    --color-muted: var(--vt-c-text-muted-dark);
+
+    --color-link: var(--vt-c-text-dark-1);
+    --color-link-hover: var(--vt-c-text-dark-1);
   }
 }
 
@@ -72,4 +82,52 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+.gradinet-border-bottom {
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to right,
+      var(--color-background),
+      var(--color-text),
+      var(--color-background)
+    )
+    0 0 1 0;
+}
+
+.btn-primary {
+  transition: all 0.5s ease-out;
+  margin: 5vh 0;
+  padding: 1vw;
+  background: var(--color-background);
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: var(--color-text);
+  border: 1px solid var(--color-background);
+  color: var(--color-background);
+}
+
+.border {
+  border: 1px solid var(--color-text);
+}
+
+.text-muted {
+  font-size: 0.8rem;
+  color: var(--color-muted);
 }
