@@ -70,6 +70,9 @@ img {
   .msg {
     display: none;
   }
+  .presentación {
+    height: auto;
+  }
 }
 @media (min-width: 1100px) and (max-width: 1400px) {
   .presentation {
