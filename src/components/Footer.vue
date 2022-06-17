@@ -26,6 +26,16 @@ import "bootstrap-icons/font/bootstrap-icons.css";
               <i class="bi bi-youtube"></i>
             </a>
           </li>
+          <li>
+            <a href="https://twitch.com">
+              <i class="bi bi-twitch"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitch.com">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -53,9 +63,17 @@ li {
   float: left;
 }
 @media (max-width: 435px) {
+  .box {
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
   li {
     float: none;
-    font-size: calc(0.75em + 1vmin);
   }
 }
 </style>

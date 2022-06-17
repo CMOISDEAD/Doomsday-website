@@ -1,34 +1,89 @@
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          title: "lightning fast",
+          content:
+            "adipisicing iusto iste eos nobis quas. sunt perferendis odio fuga",
+          icon: "",
+        },
+        {
+          title: "Extensible and customizable",
+          content:
+            "adipisicing iusto iste eos nobis quas. sunt perferendis odio fuga",
+          icon: "",
+        },
+        {
+          title: "Multiplataform",
+          content:
+            "adipisicing iusto iste eos nobis quas. sunt perferendis odio fuga",
+          icon: "",
+        },
+        {
+          title: "Find and replace",
+          content:
+            "adipisicing iusto iste eos nobis quas. sunt perferendis odio fuga",
+          icon: "",
+        },
+        {
+          title: "Packages",
+          content:
+            "adipisicing iusto iste eos nobis quas. sunt perferendis odio fuga",
+          icon: "",
+        },
+        {
+          title: "Open Source",
+          content:
+            "adipisicing iusto iste eos nobis quas. sunt perferendis odio fuga",
+          icon: "",
+        },
+      ],
+    };
+  },
+};
+</script>
+
 <template>
   <div id="features">
     <h1>Features.</h1>
     <br />
-    <div class="content">
-      <div>
-        <p class="fs-4">lightning-fast</p>
-        Amet laudantium voluptatibus dolor sint nostrum Cupiditate provident
-        velit molestias voluptates aperiam minima. Voluptates rem sed incidunt
-        facilis temporibus maxime dolorum Rem obcaecati perspiciatis sapiente ea
-        minima! Nihil aliquid dignissimos.
-      </div>
-      <br />
-      <div>
-        <p class="fs-4">Cross-platform editing</p>
-        Sit nulla sint quae totam atque cupiditate Fuga porro quod deserunt
-        reprehenderit tempore Provident voluptas a similique animi odit Optio
-        perferendis accusamus vero velit beatae! Quae eaque sit harum voluptas.
-      </div>
-      <br />
-      <div>
-        <p class="fs-4">highly customizable</p>
-        Ipsum quasi odio quasi hic alias porro. Laborum sint perspiciatis libero
-        repellendus quia Doloribus eos cumque architecto repellendus beatae Iure
-        delectus ducimus ipsa quis quidem Quidem ipsa hic quasi sunt!
-      </div>
+    <div class="grid">
+      <li class="item" v-for="item in items">
+        <i class="icon background-primary bi bi-box"></i>
+        <div class="content">
+          <h2>{{ item.title }}</h2>
+          {{ item.content }}
+        </div>
+      </li>
     </div>
   </div>
 </template>
 
 <style>
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.item {
+  width: 35vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.item:hover .icon {
+  color: cyan;
+}
+.icon {
+  padding: 1rem;
+  font-size: 2.5rem;
+  margin-right: 1vw;
+  transition: all 0.5s ease-out;
+}
 .fs-4 {
   font-size: 1.5rem;
   font-weight: bold;
